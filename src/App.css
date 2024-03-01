@@ -51,3 +51,20 @@ a {
   font-family: inherit;
   font-size: 1em;
 }
+
+#tumblr-quote {
+  margin-right: 350px;
+}
+
+
+@media (max-width: 700px) {
+  #quote-box {
+    max-width: 500px;
+  }
+  .buttons {
+    display: flex;
+  }
+  #tumblr-quote {
+    margin-right: 250px;
+  }
+}

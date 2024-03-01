@@ -41,42 +41,33 @@ function App() {
           <h4 id="author">-  {quote.author}</h4>
         </div>
         <div className="buttons">
-          
-            <a href={"https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=${quote.quote}"}
+          <a href={"https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=${quote.quote}"}
             id='tweet-quote'
             target='_blank'
             style={{
               backgroundColor: randomColor,
               marginRight: "10px",
               transition,
+            }}>
+            <FaTwitter color='white' />
+          </a>
+          <a 
+            id="tumblr-quote"
+            target="_blank"
+            style={{
+              backgroundColor: randomColor,
+              transition,
             }}
-            >
-              <FaTwitter color='white' />
-            </a>
-            <a 
-              id="tumblr-quote" 
-              target="_blank" 
-              style={{
-                backgroundColor: randomColor,
-                marginRight: "350px",
-                transition,
-              }}
-              href={"https://www.tumblr.com/widgets/share/tool?posttype=quote&amp;tags=quotes,freecodecamp&amp;caption=Gloria%20Steinem&amp;content=Dreaming%2C%20after%20all%2C%20is%20a%20form%20of%20planning.&amp;canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&amp;shareSource=tumblr_share_button"} 
-              >
-              <FaTumblr color="white"/>
-            </a>
-          
-          
-            <button id='new-quote' onClick={changeQuote} style={{ backgroundColor: randomColor, transition}}>
-              New quote
-            </button>
-          
-          
+            href={"https://www.tumblr.com/widgets/share/tool?posttype=quote&amp;tags=quotes,freecodecamp&amp;caption=Gloria%20Steinem&amp;content=Dreaming%2C%20after%20all%2C%20is%20a%20form%20of%20planning.&amp;canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&amp;shareSource=tumblr_share_button"}>
+            <FaTumblr color="white"/>
+          </a>
+          <button id='new-quote' onClick={changeQuote} style={{ backgroundColor: randomColor, transition}}>
+            New quote
+          </button>
         </div>
       </div>
     </div>
-  )
-  
+  ) 
 }
 
 export default App
